@@ -8,10 +8,10 @@ int main(int argc, char *argv[]) {
 	if  (rc < 0) {
 		fprintf(stderr, "fork failed\n");
 	} else if (rc == 0) {
-		printf("hello");
+		printf("hello\n");
 	} else {
 		sleep(3);
-		printf("goodbye");
+		printf("goodbye\n");
 	}
 
 }
@@ -19,8 +19,6 @@ int main(int argc, char *argv[]) {
 /********************************
 
 Christopher Anderson:
-Question 1: The value of the variable is the same as the value of the variable in the parent.
-Quesiton 2: When the values of x are changed by both the parent and the child, the value is only afected once, 
-			this means that they each have their own reference to a different variable it seems.
+Question 1: I can do this without calling wait by making the parent process take a long to complete.
 
 ********************************/

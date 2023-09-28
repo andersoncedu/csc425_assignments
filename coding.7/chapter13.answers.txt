@@ -1,0 +1,217 @@
+2. This was my output when running 'free -h': 
+               total        used        free      shared  buff/cache   available
+Mem:           7.8Gi       7.0Gi       641Mi        17Mi       223Mi       734Mi
+Swap:           24Gi       1.9Gi        22Gi
+
+4. It increases when I run the memory-user. It normalizes when the process is killed. I'm having trouble getting specific amounts of memory used.
+
+6. I used ps -ax to show all processes.
+
+7. 
+
+486:   su andersonc
+     Address Perm   Offset Device   Inode Pss Mapping
+7faa48120000 r--p 00000000  00:00 1042090   0 libnss_systemd.so.2
+7faa48126000 r-xp 00006000  00:00 1042090   0 libnss_systemd.so.2
+7faa48158000 r--p 00038000  00:00 1042090   0 libnss_systemd.so.2
+7faa48168000 r--p 00047000  00:00 1042090   0 libnss_systemd.so.2
+7faa4816c000 rw-p 0004b000  00:00 1042090   0 libnss_systemd.so.2
+7faa48170000 r--p 00000000  00:00 1013454   0 pam_systemd.so
+7faa4817a000 r-xp 0000a000  00:00 1013454   0 pam_systemd.so
+7faa481c6000 r--p 00056000  00:00 1013454   0 pam_systemd.so
+7faa481dd000 ---p 0006d000  00:00 1013454   0 pam_systemd.so
+7faa481de000 r--p 0006d000  00:00 1013454   0 pam_systemd.so
+7faa481e3000 rw-p 00072000  00:00 1013454   0 pam_systemd.so
+7faa481e4000 rw-p 00000000  00:00       0   0
+7faa481f0000 r--p 00000000  00:00 1109411   0 pam_umask.so
+7faa481f1000 r-xp 00001000  00:00 1109411   0 pam_umask.so
+7faa481f2000 r--p 00002000  00:00 1109411   0 pam_umask.so
+7faa481f3000 r--p 00002000  00:00 1109411   0 pam_umask.so
+7faa481f4000 rw-p 00003000  00:00 1109411   0 pam_umask.so
+7faa48200000 r--p 00000000  00:00 1014567   0 libcap.so.2.44
+7faa48203000 r-xp 00003000  00:00 1014567   0 libcap.so.2.44
+7faa48207000 r--p 00007000  00:00 1014567   0 libcap.so.2.44
+7faa48209000 r--p 00008000  00:00 1014567   0 libcap.so.2.44
+7faa4820a000 rw-p 00009000  00:00 1014567   0 libcap.so.2.44
+7faa48210000 r--p 00000000  00:00 1082284   0 pam_cap.so
+7faa48211000 r-xp 00001000  00:00 1082284   0 pam_cap.so
+7faa48212000 r--p 00002000  00:00 1082284   0 pam_cap.so
+7faa48213000 r--p 00002000  00:00 1082284   0 pam_cap.so
+7faa48214000 rw-p 00003000  00:00 1082284   0 pam_cap.so
+7faa48220000 r--p 00000000  00:00 1109396   0 pam_permit.so
+7faa48221000 r-xp 00001000  00:00 1109396   0 pam_permit.so
+7faa48222000 r--p 00002000  00:00 1109396   0 pam_permit.so
+7faa48223000 r--p 00002000  00:00 1109396   0 pam_permit.so
+7faa48224000 rw-p 00003000  00:00 1109396   0 pam_permit.so
+7faa48230000 r--p 00000000  00:00 1109374   0 pam_deny.so
+7faa48231000 r-xp 00001000  00:00 1109374   0 pam_deny.so
+7faa48232000 r--p 00002000  00:00 1109374   0 pam_deny.so
+7faa48233000 r--p 00002000  00:00 1109374   0 pam_deny.so
+7faa48234000 rw-p 00003000  00:00 1109374   0 pam_deny.so
+7faa48240000 r--p 00000000  00:00 1002586   0 libresolv.so.2
+7faa48243000 r-xp 00003000  00:00 1002586   0 libresolv.so.2
+7faa4824d000 r--p 0000d000  00:00 1002586   0 libresolv.so.2
+7faa48250000 r--p 0000f000  00:00 1002586   0 libresolv.so.2
+7faa48251000 rw-p 00010000  00:00 1002586   0 libresolv.so.2
+7faa48252000 rw-p 00000000  00:00       0   0
+7faa48260000 r--p 00000000  00:00 1107861   0 libkeyutils.so.1.9
+7faa48262000 r-xp 00002000  00:00 1107861   0 libkeyutils.so.1.9
+7faa48264000 r--p 00004000  00:00 1107861   0 libkeyutils.so.1.9
+7faa48265000 r--p 00004000  00:00 1107861   0 libkeyutils.so.1.9
+7faa48266000 rw-p 00005000  00:00 1107861   0 libkeyutils.so.1.9
+7faa48270000 r--p 00000000  00:00  214458   0 libkrb5support.so.0.1
+7faa48273000 r-xp 00003000  00:00  214458   0 libkrb5support.so.0.1
+7faa48279000 r--p 00009000  00:00  214458   0 libkrb5support.so.0.1
+7faa4827b000 ---p 0000b000  00:00  214458   0 libkrb5support.so.0.1
+7faa4827c000 r--p 0000b000  00:00  214458   0 libkrb5support.so.0.1
+7faa4827d000 rw-p 0000c000  00:00  214458   0 libkrb5support.so.0.1
+7faa48280000 r--p 00000000  00:00 1107729   0 libcom_err.so.2.1
+7faa48282000 r-xp 00002000  00:00 1107729   0 libcom_err.so.2.1
+7faa48283000 r--p 00003000  00:00 1107729   0 libcom_err.so.2.1
+7faa48284000 r--p 00003000  00:00 1107729   0 libcom_err.so.2.1
+7faa48285000 rw-p 00004000  00:00 1107729   0 libcom_err.so.2.1
+7faa48290000 r--p 00000000  00:00   45092   0 libk5crypto.so.3.1
+7faa48294000 r-xp 00004000  00:00   45092   0 libk5crypto.so.3.1
+7faa482af000 r--p 0001f000  00:00   45092   0 libk5crypto.so.3.1
+7faa482bb000 ---p 0002b000  00:00   45092   0 libk5crypto.so.3.1
+7faa482bc000 r--p 0002b000  00:00   45092   0 libk5crypto.so.3.1
+7faa482bd000 rw-p 0002c000  00:00   45092   0 libk5crypto.so.3.1
+7faa482be000 rw-p 00000000  00:00       0   0
+7faa482c0000 r--p 00000000  00:00  217341   0 libkrb5.so.3.3
+7faa482e1000 r-xp 00021000  00:00  217341   0 libkrb5.so.3.3
+7faa4833e000 r--p 0007e000  00:00  217341   0 libkrb5.so.3.3
+7faa4837b000 ---p 000bb000  00:00  217341   0 libkrb5.so.3.3
+7faa4837c000 r--p 000bb000  00:00  217341   0 libkrb5.so.3.3
+7faa48389000 rw-p 000c8000  00:00  217341   0 libkrb5.so.3.3
+7faa48390000 r--p 00000000  00:00  217636   0 libgssapi_krb5.so.2.2
+7faa4839b000 r-xp 0000b000  00:00  217636   0 libgssapi_krb5.so.2.2
+7faa483d3000 r--p 00043000  00:00  217636   0 libgssapi_krb5.so.2.2
+7faa483df000 ---p 0004f000  00:00  217636   0 libgssapi_krb5.so.2.2
+7faa483e0000 r--p 0004f000  00:00  217636   0 libgssapi_krb5.so.2.2
+7faa483e2000 rw-p 00051000  00:00  217636   0 libgssapi_krb5.so.2.2
+7faa483f0000 r--p 00000000  00:00 1108039   0 libtirpc.so.3.0.0
+7faa483f7000 r-xp 00007000  00:00 1108039   0 libtirpc.so.3.0.0
+7faa48412000 r--p 00022000  00:00 1108039   0 libtirpc.so.3.0.0
+7faa4841b000 ---p 0002b000  00:00 1108039   0 libtirpc.so.3.0.0
+7faa4841c000 r--p 0002b000  00:00 1108039   0 libtirpc.so.3.0.0
+7faa4841d000 rw-p 0002c000  00:00 1108039   0 libtirpc.so.3.0.0
+7faa48420000 r--p 00000000  00:00 1107933   0 libnsl.so.2.0.1
+7faa48424000 r-xp 00004000  00:00 1107933   0 libnsl.so.2.0.1
+7faa48432000 r--p 00012000  00:00 1107933   0 libnsl.so.2.0.1
+7faa48436000 r--p 00015000  00:00 1107933   0 libnsl.so.2.0.1
+7faa48437000 rw-p 00016000  00:00 1107933   0 libnsl.so.2.0.1
+7faa48438000 rw-p 00000000  00:00       0   0
+7faa48440000 r--p 00000000  00:00 1107731   0 libcrypt.so.1.1.0
+7faa48442000 r-xp 00002000  00:00 1107731   0 libcrypt.so.1.1.0
+7faa48456000 r--p 00016000  00:00 1107731   0 libcrypt.so.1.1.0
+7faa4846f000 ---p 0002f000  00:00 1107731   0 libcrypt.so.1.1.0
+7faa48470000 r--p 0002f000  00:00 1107731   0 libcrypt.so.1.1.0
+7faa48471000 rw-p 00030000  00:00 1107731   0 libcrypt.so.1.1.0
+7faa48472000 rw-p 00000000  00:00       0   0
+7faa48480000 r--p 00000000  00:00 1109412   0 pam_unix.so
+7faa48483000 r-xp 00003000  00:00 1109412   0 pam_unix.so
+7faa4848b000 r--p 0000b000  00:00 1109412   0 pam_unix.so
+7faa4848d000 ---p 0000d000  00:00 1109412   0 pam_unix.so
+7faa4848e000 r--p 0000d000  00:00 1109412   0 pam_unix.so
+7faa4848f000 rw-p 0000e000  00:00 1109412   0 pam_unix.so
+7faa48490000 rw-p 00000000  00:00       0   0
+7faa484a0000 r--p 00000000  00:00 1109387   0 pam_limits.so
+7faa484a2000 r-xp 00002000  00:00 1109387   0 pam_limits.so
+7faa484a5000 r--p 00005000  00:00 1109387   0 pam_limits.so
+7faa484a6000 r--p 00005000  00:00 1109387   0 pam_limits.so
+7faa484a7000 rw-p 00006000  00:00 1109387   0 pam_limits.so
+7faa484b0000 r--p 00000000  00:00 1109391   0 pam_mail.so
+7faa484b1000 r-xp 00001000  00:00 1109391   0 pam_mail.so
+7faa484b3000 r--p 00003000  00:00 1109391   0 pam_mail.so
+7faa484b4000 r--p 00003000  00:00 1109391   0 pam_mail.so
+7faa484b5000 rw-p 00004000  00:00 1109391   0 pam_mail.so
+7faa484c0000 r--p 00000000  00:00 1109376   0 pam_env.so
+7faa484c1000 r-xp 00001000  00:00 1109376   0 pam_env.so
+7faa484c3000 r--p 00003000  00:00 1109376   0 pam_env.so
+7faa484c4000 r--p 00003000  00:00 1109376   0 pam_env.so
+7faa484c5000 rw-p 00004000  00:00 1109376   0 pam_env.so
+7faa484d0000 r--p 00000000  00:00 1107968   0 libpcre2-8.so.0.10.4
+7faa484d2000 r-xp 00002000  00:00 1107968   0 libpcre2-8.so.0.10.4
+7faa4853d000 r--p 0006d000  00:00 1107968   0 libpcre2-8.so.0.10.4
+7faa48565000 r--p 00094000  00:00 1107968   0 libpcre2-8.so.0.10.4
+7faa48566000 rw-p 00095000  00:00 1107968   0 libpcre2-8.so.0.10.4
+7faa48570000 r--p 00000000  00:00 1108007   0 libselinux.so.1
+7faa48576000 r-xp 00006000  00:00 1108007   0 libselinux.so.1
+7faa48590000 r--p 00020000  00:00 1108007   0 libselinux.so.1
+7faa48597000 ---p 00027000  00:00 1108007   0 libselinux.so.1
+7faa48598000 r--p 00027000  00:00 1108007   0 libselinux.so.1
+7faa48599000 rw-p 00028000  00:00 1108007   0 libselinux.so.1
+7faa4859a000 rw-p 00000000  00:00       0   0
+7faa485a0000 r--p 00000000  00:00 1109399   0 pam_rootok.so
+7faa485a1000 r-xp 00001000  00:00 1109399   0 pam_rootok.so
+7faa485a2000 r--p 00002000  00:00 1109399   0 pam_rootok.so
+7faa485a3000 r--p 00002000  00:00 1109399   0 pam_rootok.so
+7faa485a4000 rw-p 00003000  00:00 1109399   0 pam_rootok.so
+7faa485a9000 r--p 00000000  00:00 1038935   0 LC_CTYPE
+7faa48600000 rw-p 00000000  00:00       0   0
+7faa48610000 r--p 00000000  00:00 1107723   0 libcap-ng.so.0.0.0
+7faa48612000 r-xp 00002000  00:00 1107723   0 libcap-ng.so.0.0.0
+7faa48615000 r--p 00005000  00:00 1107723   0 libcap-ng.so.0.0.0
+7faa48616000 r--p 00005000  00:00 1107723   0 libcap-ng.so.0.0.0
+7faa48617000 rw-p 00006000  00:00 1107723   0 libcap-ng.so.0.0.0
+7faa48620000 r--p 00000000  00:00 1107702   0 libaudit.so.1.0.0
+7faa48623000 r-xp 00003000  00:00 1107702   0 libaudit.so.1.0.0
+7faa4862b000 r--p 0000b000  00:00 1107702   0 libaudit.so.1.0.0
+7faa48640000 r--p 0001f000  00:00 1107702   0 libaudit.so.1.0.0
+7faa48641000 rw-p 00020000  00:00 1107702   0 libaudit.so.1.0.0
+7faa48642000 rw-p 00000000  00:00       0   0
+7faa48650000 r--p 00000000  00:00 1002150   0 libc.so.6
+7faa48678000 r-xp 00028000  00:00 1002150   0 libc.so.6
+7faa4880d000 r--p 001bd000  00:00 1002150   0 libc.so.6
+7faa48865000 r--p 00214000  00:00 1002150   0 libc.so.6
+7faa48869000 rw-p 00218000  00:00 1002150   0 libc.so.6
+7faa4886b000 rw-p 00000000  00:00       0   0
+7faa48880000 r--p 00000000  00:00 1107951   0 libpam_misc.so.0.82.1
+7faa48881000 r-xp 00001000  00:00 1107951   0 libpam_misc.so.0.82.1
+7faa48883000 r--p 00003000  00:00 1107951   0 libpam_misc.so.0.82.1
+7faa48884000 r--p 00003000  00:00 1107951   0 libpam_misc.so.0.82.1
+7faa48885000 rw-p 00004000  00:00 1107951   0 libpam_misc.so.0.82.1
+7faa48890000 r--p 00000000  00:00 1107949   0 libpam.so.0.85.1
+7faa48893000 r-xp 00003000  00:00 1107949   0 libpam.so.0.85.1
+7faa4889c000 r--p 0000c000  00:00 1107949   0 libpam.so.0.85.1
+7faa488a0000 r--p 0000f000  00:00 1107949   0 libpam.so.0.85.1
+7faa488a1000 rw-p 00010000  00:00 1107949   0 libpam.so.0.85.1
+7faa488a6000 r--p 00000000  00:00 1039046   0 LC_NUMERIC
+7faa488a7000 r--p 00000000  00:00 1039263   0 LC_TIME
+7faa488a8000 r--p 00000000  00:00 1038894   0 LC_COLLATE
+7faa488a9000 r--s 00000000  00:00 1014491   0 gconv-modules.cache
+7faa488b0000 r--p 00000000  00:00 1002138   0 ld-linux-x86-64.so.2
+7faa488b1000 r--p 00001000  00:00 1002138   0 ld-linux-x86-64.so.2
+7faa488b2000 r-xp 00002000  00:00 1002138   0 ld-linux-x86-64.so.2
+7faa488db000 r-xp 0002b000  00:00 1002138   0 ld-linux-x86-64.so.2
+7faa488dc000 r--p 0002c000  00:00 1002138   0 ld-linux-x86-64.so.2
+7faa488e6000 r--p 00036000  00:00 1002138   0 ld-linux-x86-64.so.2
+7faa488e7000 r--p 00000000  00:00 1038993   0 LC_MONETARY
+7faa488e8000 r--p 00037000  00:00 1002138   0 ld-linux-x86-64.so.2
+7faa488ea000 rw-p 00039000  00:00 1002138   0 ld-linux-x86-64.so.2
+7faa488ec000 r--p 00000000  00:00 1038971   0 SYS_LC_MESSAGES
+7faa488ed000 r--p 00000000  00:00 1039172   0 LC_PAPER
+7faa488ee000 r--p 00000000  00:00 1039025   0 LC_NAME
+7faa488ef000 r--p 00000000  00:00 1038417   0 LC_ADDRESS
+7faa488f0000 rw-p 00000000  00:00       0   0
+7faa488f2000 r--p 00000000  00:00 1039230   0 LC_TELEPHONE
+7faa488f3000 r--p 00000000  00:00 1038963   0 LC_MEASUREMENT
+7faa488f4000 r--p 00000000  00:00 1038946   0 LC_IDENTIFICATION
+7faa488f5000 r--p 00000000  00:00 1082603   0 su
+7faa488f7000 r--p 00002000  00:00 1082603   0 su
+7faa488f8000 r-xp 00003000  00:00 1082603   0 su
+7faa488fe000 r-xp 00009000  00:00 1082603   0 su
+7faa488ff000 r--p 0000a000  00:00 1082603   0 su
+7faa48900000 r--p 0000b000  00:00 1082603   0 su
+7faa48902000 r--p 0000c000  00:00 1082603   0 su
+7faa48903000 rw-p 0000d000  00:00 1082603   0 su
+7ffff6d56000 rw-p 00000000  00:00       0   0 [heap]
+7ffffdd69000 rw-p 00000000  00:00       0   4 [stack]
+7ffffe6ef000 r-xp 00000000  00:00       0   0 [vdso]
+                                          ===
+                                            4 KB
+
+I see a lot of different information like the mapping, where it's located and vDSO, which stands for virtual dynamic shared object.
+There are a ton of different things here it seems like there are os things (linux) for the processes along with heap and stack.
+
+8. I see the memory change, but it doesn't match my expectations I am not seeing as much memory being used as I expected.
